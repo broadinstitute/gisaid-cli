@@ -1,0 +1,15 @@
+name: cli3_env
+channels:
+  - conda-forge
+  - bioconda
+  - pypi
+  - nodefaults
+
+dependencies:
+  - python==3.10
+  - pip==22.1
+  - requests==2.27.1
+  - pandas==1.3.5
+  - pip:
+    - '.' # this is '-e .' for developer mode install of cli3
+    # for --user install do '-e . --user --no-use-pep517'

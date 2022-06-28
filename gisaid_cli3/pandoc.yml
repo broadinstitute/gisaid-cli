@@ -1,0 +1,35 @@
+---
+reader: markdown_strict+smart+backtick_code_blocks
+geometry:
+- a4paper
+- left=3cm
+- right=2cm
+- top=2cm
+- bottom=2cm
+- nohead
+columns: 120
+header-includes:
+- \usepackage{xcolor}
+- \lstset{breaklines=true}
+- \lstset{language=[Motorola68k]Assembler}
+- \lstset{basicstyle=\small\ttfamily}
+- \lstset{extendedchars=true}
+- \lstset{tabsize=2}
+- \lstset{columns=fixed}
+- \lstset{showstringspaces=false}
+- \lstset{frame=trbl}
+- \lstset{frameround=tttt}
+- \lstset{framesep=4pt}
+- \lstset{numbers=left}
+- \lstset{numberstyle=\tiny\ttfamily}
+- \lstset{postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\color{red}\hookrightarrow\space}}}
+mainfont: Helvetica Neue
+monofont: Monaco
+block-headings: true
+...
+
+# to render this file as a pdf
+# wget https://github.com/jgm/pandoc/releases/download/2.18/pandoc-2.18-linux-amd64.tar.gz
+# tar xvfz pandoc-2.18-linux-amd64.tar.gz
+# sudo yum install texlive*
+# pandoc README.md -o README.pdf --listings --pdf-engine=pdflatex --metadata-file pandoc.yml
