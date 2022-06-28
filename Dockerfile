@@ -4,14 +4,11 @@ LABEL maintainer "Daniel Park <dpark@broadinstitute.org>"
 
 WORKDIR /opt/gisaid
 
-COPY requirements.txt gisaid_cli3 /opt/gisaid
-
+COPY requirements.txt /opt/gisaid/
 RUN pip3 install -r /opt/gisaid/requirements.txt
+
+COPY gisaid_cli3 /opt/gisaid/gisaid_cli3/
 RUN pip3 install /opt/gisaid/gisaid_cli3
-
-#ENV PATH="$PATH:/opt/gisaid/scripts"
-
-#COPY . /opt/gisaid
 
 RUN cli3 -h
 
