@@ -55,7 +55,7 @@ setup(
     license=cli3.__license__,
     package_data={"": ["*.fa*",
                        "*.csv"]},
-    install_requires=["requests==2.27.1",
+    install_requires=["requests==2.32.4",
                       "pandas==1.3.5"],
 )
 
